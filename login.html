@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>        
+        <title>Login - loja virtual - while developer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Language" content="pt-br" lang="pt-br">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="author" content="Ernande Linhares">
+        <meta name="robots" content="all">
+        <meta name="keywords" content="tela de login,login jquery,login loja virtual,while developer, whiledeveloper, ernande linhares" >
+        <meta name="description" content="Layout loja virtual tela de login. while developer." >      
+        <link rel="stylesheet" href="css/loja.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+        
+    </head>
+    <body>
+        
+        <div class="layoutvalidopelaw3c">
+            <p>
+                <a href="http://validator.w3.org/check?uri=referer" onclick="window.open('http://validator.w3.org/check?uri=referer'); return false;"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+            </p>
+        
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer" onclick="window.open('http://jigsaw.w3.org/css-validator/check/referer'); return false;">
+                    <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS válido!">
+                </a>
+            </p>
+        </div>        
+        
+        <div class="container">
+            <div id="header"><!-- inicio header -->
+                <div class="topHeader">
+                    <div class="maincenter">				
+                            <div id="logo">
+                                <a href="index.html"><img src="img/logo.png" alt="Monitor" ></a>
+                            </div>
+                            <div class="header_fone">Compre pelo Telefone (xx) xxxxx-xxxx</div>
+                            <div class="search" >
+                                <input type="text" class="inputtext" value="O que você procura?" >
+                                <input type="button" class="btn_ui" value="Pesquisar" >
+                            </div>
+                            <div class="carrinho">
+                                <input type="hidden" value="0" id="total">
+                                <div class="checkcarrinho">							
+                                        <img src="img/icone_carrinho.png" alt="Monitor" >
+                                        Meu Carrinho <span class="intens_carrinho">0</span>							
+                                </div>	
+                                <div class="form_carrinho">
+                                        <a href="login.html">faça seu login ou cadastre-se</a>
+                                </div>
+                            </div>					
+                    </div>				
+                </div>
+                <div class="menuWrap">
+                        <ul class="headerMenu">	
+                            <li><a href="#content"><b> Ultrabooks</b></a></li>
+                            <li><a href="#content"><b> Notebooks</b></a></li>
+                            <li><a href="#content"><b> Netbooks</b></a></li>
+                            <li><a href="#content"><b> Tablets</b></a></li>
+                            <li><a href="#content"><b> Games</b></a></li>
+                        </ul>				
+                </div>
+            </div> <!-- header -->	
+										
+			
+											
+            <div class="title_destaque mg_top">Identificação</div>	
+
+            <div class="identificacao_left mg_canto">
+                    <div class="title_destaque"><span>Novo</span> Cadastro</div>
+                    <div class="mg_top">Se você ainda não é cadastrado, escolha uma das opções abaixo:</div>	
+                    <input type="button" class="btn_ui mg_top" id="cad_btn_fisica" value="Para Pessoas físicas">
+                    <input type="button" class="btn_ui mg_top" id="cad_btn_juridica" value="Para Pessoas jurídicas">
+
+                    <div class="container_cadastro_fj">
+                            <!-- cadastro de pessoas fisicas-->
+                            <form class="mg_top" id="cad_pessoa" method="post" action="">
+                                    <table >
+                                            <tr>
+                                                <td><label for="cf_nome" ><em >Nome</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="nome" id="cf_nome"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cf_cpf"><em >CPF</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="cpf" id="cf_cpf"></td>
+                                            </tr>
+                                            <tr>
+                                                    <td><em >Sexo</em></td>
+                                                    <td><input type="radio" name="sexo" value="m"> Masculino<input type="radio" name="sexo" value="f"> Feminino</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cf_cep"><em >CEP</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="cep" id="cf_cep" ></td>
+                                            </tr>
+                                    </table>
+
+                                    <div class="title_destaque mg_top">Dados de acesso no site</div>
+
+                                    <table > 	
+                                            <tr>
+                                                <td><label for="cf_email"><em >E-mail</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="email" id="cf_email" ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cf_r_email"><em >Repita o e-mail</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="r_email" id="cf_r_email" ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cf_senha"><em >Senha</em></label></td>
+                                                <td><input class="mg_canto" type="text" name="senha" id="cf_senha"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cf_r_senha"><em >Repita a Senha</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="r_senha" id="cf_r_senha"></td>
+                                            </tr>					
+                                            <tr>
+                                                <td colspan="2"><input type="button" class="btn_ui mg_top" value="Cadastrar"></td>
+                                            </tr>						
+                                    </table>													
+                            </form>	
+                            <!-- cadastro de pessoas juridicas-->
+                            <form class="mg_top" id="cad_juridica" method="post" action="">
+                                    <table >
+                                            <tr>
+                                                <td><label for="cj_razao_social"><em >Razão social</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="razao_social" id="cj_razao_social"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cj_nome_fantasia"><em >Nome Fantasia</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="nome_fantasia" id="cj_nome_fantasia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cj_cnpj"><em >CNPJ</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="cnpj" id="cj_cnpj"></td>
+                                            </tr>							
+                                            <tr>
+                                                <td><label for="cj_cep"><em >CEP</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="cep" id="cj_cep"></td>
+                                            </tr>
+                                    </table>
+
+                                    <div class="title_destaque mg_top">Dados de acesso no site</div>
+
+                                    <table > 	
+                                            <tr>
+                                                <td><label for="cj_email"><em >E-mail</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="email" id="cj_email" ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cj_r_email"><em >Repita o e-mail</em></label></td>
+                                                    <td><input class="mg_canto" type="text" id="cj_r_email"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cj_senha"><em >Senha</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="senha" id="cj_senha"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="cj_r_senha"><em >Repita a Senha</em></label></td>
+                                                    <td><input class="mg_canto" type="text" name="r_senha" id="cj_r_senha"></td>
+                                            </tr>					
+                                            <tr>
+                                                <td colspan="2"><input type="button" class="btn_ui mg_top" value="Cadastrar" ></td>
+                                            </tr>						
+                                    </table>
+                            </form>						
+                    </div>		
+            </div>
+			
+            <div class="identificacao_right mg_right">
+                    <div class="title_destaque"><span>Já sou</span> cadastrado</div>
+                    <div class="mg_canto mg_top">Se você já é cadastrado, digite seus dados:</div>	
+
+                    <div class="mg_canto mg_top">
+                            <form class="area_login_inputs" method="post" action="">
+                                <table >
+                                    <tr class="mg_top">
+                                        <td><label for="log_email" ><em >E-mail</em></label></td>
+                                        <td><input class="mg_canto" type="text" name="email" id="log_email" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="log_senha" ><em >Senha</em></label></td>
+                                        <td><input class="mg_canto" type="text" name="senha" id="log_senha" ></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input type="button" class="btn_ui mg_top" value="Entrar"></td>
+                                    </tr>                                                                                                                                           
+                                </table>
+
+                            </form>						
+                    </div>						
+            </div>			
+			
+			
+            <div id="footer"><!-- inicio footer -->
+                <div class="maincenter">
+                    <a href="https://www.facebook.com/ernande.linhares" onclick="window.open('https://www.facebook.com/ernande.linhares'); return false;"><img src="img/facebook.png" alt="Ernande Linhares - facebook"></a>
+                    <a href="http://br.linkedin.com/pub/ernande-linhares/4a/964/976" onclick="window.open('http://br.linkedin.com/pub/ernande-linhares/4a/964/976'); return false;"><img src="img/linkdin.png" alt="Ernande Linhares - linkindin"></a>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer" onclick="window.open('http://jigsaw.w3.org/css-validator/check/referer'); return false;"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS válido!"></a>
+                    <a href="http://validator.w3.org/check?uri=referer" onclick="window.open('http://validator.w3.org/check?uri=referer'); return false;"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a><br><br>
+                    Projeto acadêmico - <a style="color: #f93;" href="http://whiledeveloper.com.br/" onclick="window.open('http://whiledeveloper.com.br'); return false;">while developer</a> - Todos os direitos reservados
+                </div>		
+
+                <div class="shopping-cart drop-here ui-droppable" id="shopping-cart">		
+                    <div class="inside">	
+                        <h3 class="adj_cart">Meu Carrinho</h3>		
+                        <div class="basket-icons">					
+                            <img src="img/shopping_cart_full.png" alt="shopping cart" width="120" height="80" >			
+                        </div>
+
+                            <div id="carrinho-container">
+                                <ul id="carrinho-produtos">
+                                    <li class="adicione">Arraste os produtos para esta área</li>
+                                </ul>
+                            </div>
+
+                            <div id="cartTotal" style="display: block;">
+                                <p>
+                                    Total: R$<span class="total-amount"> 0</span><br >
+                                    Itens<span class="intens_carrinho" style="background: none"> 0 </span><br >
+                                    <a href="#" id="finish">Finalizar</a>
+                                    <a href="#" id="limpar">Cancelar</a>
+                                </p>
+                            </div>			
+                    </div>				
+                </div>	
+
+                <div id="dialog" title="Finalizar compra">
+                  <p>Obrigado por comprar conosco</p>
+                  <p>Quantidade de itens:<span class="intens_carrinho" style="background: none"> 0 </span></p>
+                  <p>Total da compra: R$<span class="total-amount"> 0</span></p>			 
+                </div>
+                
+            </div><!-- fim footer -->       
+			
+        </div>
+        
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <script type="text/javascript" src="js/jquerycicle.js" ></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.elevateZoom.js" ></script>
+        <script type="text/javascript" src="js/geral.js" ></script>
+    </body>
+</html>
