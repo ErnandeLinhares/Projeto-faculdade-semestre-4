@@ -1,4 +1,18 @@
 $(document).ready(function(){
+
+	$('a[href*="w3.org"]').click(function() {
+        var currentUrl = window.location.href;
+        var w3cValidation = currentUrl;
+
+        if ($(this).is('[href*="css-validator"'))
+          w3cValidation = "http://jigsaw.w3.org/css-validator/validator?uri="+currentUrl;
+        else
+          w3cValidation = "http://validator.w3.org/check?uri="+currentUrl;
+
+        window.open(w3cValidation);
+        return false;
+    });
+
 	$("#cad_juridica").hide(); //esconde o formulario juridico 
 	$("#cad_pessoa").hide();   //esconde o formulario pes fisica
 	$("#cad_btn_fisica").click(function(){
@@ -168,13 +182,3 @@ $(function(){
 	      }
     });
 });
-
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-34682639-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
