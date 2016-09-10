@@ -1,16 +1,16 @@
 $(document).ready(function(){
 
-	$('a[href*="w3.org"]').click(function() {
+	$('a[href*="w3.org"]').each(function() {
+
         var currentUrl = window.location.href;
         var w3cValidation = currentUrl;
 
-        if ($(this).is('[href*="css-validator"'))
+        if ($(this).attr('[href*="css-validator"'))
           w3cValidation = "http://jigsaw.w3.org/css-validator/validator?uri="+currentUrl;
         else
           w3cValidation = "http://validator.w3.org/check?uri="+currentUrl;
-
-        window.open(w3cValidation);
-        return false;
+       
+      	$(this).attr("href", w3cValidation).attr("target", "_blank");
     });
 
 	$("#cad_juridica").hide(); //esconde o formulario juridico 
