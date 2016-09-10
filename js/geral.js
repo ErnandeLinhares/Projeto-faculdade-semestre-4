@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
 	$('a[href*="w3.org"]').each(function() {
-
-        var currentUrl = window.location.href;
+		
+		var currentUrl = window.location.href;
         var w3cValidation = currentUrl;
 
-        if ($(this).attr('[href*="css-validator"'))
+        if (/.jigsaw/.test($(this).attr('href')))
           w3cValidation = "http://jigsaw.w3.org/css-validator/validator?uri="+currentUrl;
         else
           w3cValidation = "http://validator.w3.org/check?uri="+currentUrl;
